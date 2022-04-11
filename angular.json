@@ -27,9 +27,24 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "assets/css/bootstrap-grid.min.css",
+              "assets/css/bootstrap-reboot.min.css",
+              "assets/css/default-skin.css",
+              "assets/css/ionicons.min.css",
+              "assets/css/jquery.mCustomScrollbar.min.css",
+              "assets/css/main.css",
+              "assets/css/nouislider.min.css",
+              "assets/css/owl.carousel.min.css",
+              "assets/css/photoswipe.css",
+              "assets/css/plyr.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+                            "node_modules/popper.js/dist/umd/popper.min.js",
+                            "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
