@@ -1,5 +1,5 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "$schema": "/node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -29,16 +29,16 @@
             "styles": [
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "assets/css/bootstrap-grid.min.css",
-              "assets/css/bootstrap-reboot.min.css",
-              "assets/css/default-skin.css",
-              "assets/css/ionicons.min.css",
-              "assets/css/jquery.mCustomScrollbar.min.css",
-              "assets/css/main.css",
-              "assets/css/nouislider.min.css",
-              "assets/css/owl.carousel.min.css",
-              "assets/css/photoswipe.css",
-              "assets/css/plyr.css"
+              "src/assets/css/bootstrap-grid.min.css",
+              "src/assets/css/bootstrap-reboot.min.css",
+              "src/assets/css/default-skin.css",
+              "src/assets/css/ionicons.min.css",
+              "src/assets/css/jquery.mCustomScrollbar.min.css",
+              "src/assets/css/main.css",
+              "src/assets/css/nouislider.min.css",
+              "src/assets/css/owl.carousel.min.css",
+              "src/assets/css/photoswipe.css",
+              "src/assets/css/plyr.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
