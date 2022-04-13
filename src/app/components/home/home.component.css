@@ -1,0 +1,11 @@
+ .card {
+    background-color:transparent;
+    border : none;
+    font-family: 'Ubuntu', sans-serif;
+}
+.carousel-inner{
+    width: 70%;
+    height: 50%;
+    margin: auto;
+    border-radius: 10px;
+}
