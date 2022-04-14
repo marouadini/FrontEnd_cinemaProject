@@ -12,4 +12,8 @@ export class FilmsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+// filter(id:number){
+//   console.log(id)
+// }
+  
 }
