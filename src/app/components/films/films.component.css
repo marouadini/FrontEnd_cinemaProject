@@ -7,7 +7,7 @@
     margin-left: 350px;
     overflow: hidden;
     transition: 0.4s ease;
-    background-color: #2b2b31;
+    background-color: #28282d;
     z-index: 1;
     border-radius: 5px;
     box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
@@ -42,9 +42,9 @@
   #dateoffilm{
     border: 1px solid #fff;
     border-radius: 5px;
-    background-color: #28282d;
+    background-color: #fff;
     padding: 3px 5px;
-    color: #fff;
+    color: 28282d;
     box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
     width: 190px;
     margin-left: -150px;
