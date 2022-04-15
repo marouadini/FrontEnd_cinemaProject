@@ -1,9 +1,6 @@
 .header__search {
     display: block;
     position: relative;
-    /* bottom: 0;
-    left: 0;
-    right: 0; */
     margin-top: 60px;
     height: 60px;
     width: 700px;
@@ -12,6 +9,7 @@
     transition: 0.4s ease;
     background-color: #2b2b31;
     z-index: 1;
+    border-radius: 5px;
     box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
     border-top: 1px solid rgba(255,255,255,0.05);
 }
@@ -21,7 +19,34 @@
     border : none;
     font-family: 'Ubuntu', sans-serif;
 }
-/* 
-mat-form-field {
-    margin-right: 12px;
-  } */
+
+[type="date"] {
+    background:rgb(245, 237, 237) url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+    
+  }
+  [type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  
+ 
+  #lblDate{
+    display: block;
+    color: #fff;
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+
+  #dateoffilm{
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #28282d;
+    padding: 3px 5px;
+    color: #fff;
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+    width: 190px;
+    margin-left: -150px;
+    margin-top: 10px;
+  }
