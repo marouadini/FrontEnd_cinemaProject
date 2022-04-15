@@ -3,9 +3,12 @@
     border : none;
     font-family: 'Ubuntu', sans-serif;
 }
+.d-block{
+    height: 100%;
+}
 .carousel-inner{
-    width: 70%;
-    height: 50%;
+    width: 80%;
+    height: 350px;
     margin: auto;
     border-radius: 10px;
 }

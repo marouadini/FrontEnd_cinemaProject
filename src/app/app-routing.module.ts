@@ -10,8 +10,6 @@ const routes: Routes = [
 {path:'films',component:FilmsComponent},
 {path:'contact',component:ContactComponent},
 {path:'evenement',component:EvenementComponent},
-
-
 ];
 
 @NgModule({
