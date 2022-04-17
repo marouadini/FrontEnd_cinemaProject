@@ -40,29 +40,31 @@
 			<div class="screen-body">
 			  <div class="screen-body-item left">
 				<div class="app-title">
-				  <span>CONTACT</span>
-				  <span>US</span>
+				  <span>CONTACTEZ</span>
+				  <span>NOUS</span>
 				</div>
 				<div class="app-contact">CONTACT INFO : +62 81 314 928 595</div>
 			  </div>
 			  <div class="screen-body-item">
-				<div class="app-form">
+				<div class="app-form"> 
+				<form (ngSubmit)="submitForm()">
 				  <div class="app-form-group">
-					<input class="app-form-control" placeholder="NAME" value="CINEMA">
+					<input class="app-form-control" name="name" placeholder="NOM" value="CINEMA" required [(ngModel)]="name">
 				  </div>
 				  <div class="app-form-group">
-					<input class="app-form-control" placeholder="NOM ET PRÉNOM">
+					<input class="app-form-control" name="prenom" placeholder="PRÉNOM" required [(ngModel)]="prenom">
 				  </div>
 				  <div class="app-form-group">
-					<input class="app-form-control" placeholder="EMAIL">
+					<input class="app-form-control" type="email" name="email" placeholder="EMAIL" required [(ngModel)]="email">
 				  </div>
 				  <div class="app-form-group message">
-					<input class="app-form-control" placeholder="MESSAGE">
+					<textarea class="app-form-control" name="message" placeholder="MESSAGE" required [(ngModel)]="message" ></textarea>
 				  </div>
 				  <div class="app-form-group buttons">
-					<button class="app-form-button">ANNULER</button> &nbsp;&nbsp;
-					<button class="app-form-button">ENVOYER</button>
+					<button class="app-form-button" type="reset">ANNULER</button> &nbsp;&nbsp;
+					<button class="app-form-button" >ENVOYER</button>
 				  </div>
+				</form>
 				</div>
 			  </div>
 			</div>
