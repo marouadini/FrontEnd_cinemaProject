@@ -1,78 +1,71 @@
-<!-- page title -->
-	<section class="section section--first section--bg" data-bg="img/section/section.jpg">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="section__wrap">
-						<!-- section title -->
-						<h2 class="section__title">Contactez Nous</h2>
-						<!-- end section title -->
+<section class="section section--first section--bg" data-bg="img/section/section.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section__wrap">
+                    <h2 class="section__title">Contactez Nous</h2>
 
-						<!-- breadcrumb -->
-						<ul class="breadcrumb">
-							<li class="breadcrumb__item"><a href="#">Acceuil</a></li>
-							<li class="breadcrumb__item breadcrumb__item--active">Contactez Nous</li>
-						</ul>
-						<!-- end breadcrumb -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- end page title -->
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb__item"><a href="#">Acceuil</a></li>
+                        <li class="breadcrumb__item breadcrumb__item--active">Contactez Nous</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end page title -->
 
-	<!-- faq -->
-	<div class="background">
-		<div class="container">
-		  <div class="screen">
-			<div class="screen-header">
-			  <div class="screen-header-left">
-				<div class="screen-header-button close"></div>
-				<div class="screen-header-button maximize"></div>
-				<div class="screen-header-button minimize"></div>
-			  </div>
-			  <div class="screen-header-right">
-				<div class="screen-header-ellipsis"></div>
-				<div class="screen-header-ellipsis"></div>
-				<div class="screen-header-ellipsis"></div>
-			  </div>
-			</div>
-			<div class="screen-body">
-			  <div class="screen-body-item left">
-				<div class="app-title">
-				  <span>CONTACTEZ</span>
-				  <span>NOUS</span>
-				</div>
-				<div class="app-contact">CONTACT INFO : +62 81 314 928 595</div>
-			  </div>
-			  <div class="screen-body-item">
-				<div class="app-form"> 
-				<form (ngSubmit)="submitForm()">
-				  <div class="app-form-group">
-					<input class="app-form-control" name="name" placeholder="NOM" value="CINEMA" required [(ngModel)]="name">
-				  </div>
-				  <div class="app-form-group">
-					<input class="app-form-control" name="prenom" placeholder="PRÉNOM" required [(ngModel)]="prenom">
-				  </div>
-				  <div class="app-form-group">
-					<input class="app-form-control" type="email" name="email" placeholder="EMAIL" required [(ngModel)]="email">
-				  </div>
-				  <div class="app-form-group message">
-					<textarea class="app-form-control" name="message" placeholder="MESSAGE" required [(ngModel)]="message" ></textarea>
-				  </div>
-				  <div class="app-form-group buttons">
-					<button class="app-form-button" type="reset">ANNULER</button> &nbsp;&nbsp;
-					<button class="app-form-button" >ENVOYER</button>
-				  </div>
-				</form>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		  
-		</div>
-	  </div>
-	  
-	<!-- end faq -->
+<!-- faq -->
+<div class="background">
+    <div class="container">
+        <div class="screen">
+            <div class="screen-header">
+                <div class="screen-header-left">
+                    <div class="screen-header-button close"></div>
+                    <div class="screen-header-button maximize"></div>
+                    <div class="screen-header-button minimize"></div>
+                </div>
+                <div class="screen-header-right">
+                    <div class="screen-header-ellipsis"></div>
+                    <div class="screen-header-ellipsis"></div>
+                    <div class="screen-header-ellipsis"></div>
+                </div>
+            </div>
+            <div class="screen-body">
+                <div class="screen-body-item left">
+                    <div class="app-title">
+                        <span>CONTACTEZ</span>
+                        <span>NOUS</span>
+                    </div>
+                    <div class="app-contact">CONTACT INFO : +62 81 314 928 595</div>
+                </div>
+                <div class="screen-body-item">
+                    <div class="app-form">
+                        <form (ngSubmit)="submitForm()">
+                            <div class="app-form-group">
+                                <input class="app-form-control" name="name" placeholder="NOM" value="CINEMA" required>
+                            </div>
+                            <div class="app-form-group">
+                                <input class="app-form-control" name="prenom" placeholder="PRÉNOM" required>
+                            </div>
+                            <div class="app-form-group">
+                                <input class="app-form-control" type="email" name="email" placeholder="EMAIL" required>
+                            </div>
+                            <div class="app-form-group message">
+                                <textarea class="app-form-control" name="message" placeholder="MESSAGE" required></textarea>
+                            </div>
+                            <div class="app-form-group buttons">
+                                <button class="app-form-button" type="reset">ANNULER</button> &nbsp;&nbsp;
+                                <button class="app-form-button">ENVOYER</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-	
+    </div>
+</div>
+
+<!-- end faq -->
