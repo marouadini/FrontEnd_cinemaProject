@@ -8,8 +8,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FilmsComponent } from './components/films/films.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import {HttpClientModule} from '@angular/common/http'
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

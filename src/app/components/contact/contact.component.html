@@ -42,18 +42,24 @@
                 </div>
                 <div class="screen-body-item">
                     <div class="app-form">
-                        <form (ngSubmit)="submitForm()">
+                        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                             <div class="app-form-group">
-                                <input class="app-form-control" name="name" placeholder="NOM" value="CINEMA" required>
+                                <input class="app-form-control" 
+                                type="text" 
+                                formControlName="name" name="name" placeholder="NOM*"  />
+                                <span *ngIf="name.invalid && name.touched">Ce champ est obligatoire </span>
                             </div>
                             <div class="app-form-group">
-                                <input class="app-form-control" name="prenom" placeholder="PRÉNOM" required>
+                                <input class="app-form-control" formControlName="prenom" name="prenom" placeholder="PRÉNOM*" >
+                                <span *ngIf="name.invalid && name.touched">Ce champ est obligatoire </span>
                             </div>
                             <div class="app-form-group">
-                                <input class="app-form-control" type="email" name="email" placeholder="EMAIL" required>
+                                <input class="app-form-control" formControlName="email" type="email" name="email" placeholder="EMAIL*" >
+                                <span *ngIf="name.invalid && name.touched">Ce champ est obligatoire </span>
                             </div>
                             <div class="app-form-group message">
-                                <textarea class="app-form-control" name="message" placeholder="MESSAGE" required></textarea>
+                                <textarea class="app-form-control" formControlName="message" name="message" placeholder="MESSAGE*" ></textarea>
+                                <span *ngIf="name.invalid && name.touched">Ce champ est obligatoire </span>
                             </div>
                             <div class="app-form-group buttons">
                                 <button class="app-form-button" type="reset">ANNULER</button> &nbsp;&nbsp;
