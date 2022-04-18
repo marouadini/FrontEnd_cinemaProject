@@ -4,7 +4,7 @@
 .sidebar {
     --body-color: #E4E9F7;
     --primary-color: white;
-    --primary-color-light: #F6F5FF;
+    --primary-color-light: white;
     --text-color: white;
     --tran-03: all 0.2s ease;
     padding: 70px;

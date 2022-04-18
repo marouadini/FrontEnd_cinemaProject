@@ -1,0 +1,45 @@
+<form class="my-form">
+    <div class="container">
+        <h1>Ajouter un personne!</h1>
+        <ul>
+            <li>
+                <div>
+                    <input type="text" placeholder="Nom" name="nom">
+                    <input type="text" placeholder="Prenom" name="prenom">
+                </div>
+            </li>
+            <li>
+                <div>
+                    <input type="date" placeholder="Date de Naissance" name="date_naissance">
+                </div>
+            </li>
+            <li>
+                <select name="nationalite">
+            <option selected disabled>-- Veuillez choisir une option --</option>
+            <option *ngFor="let nationalite of nationalites" [value]="nationalite.id">{{nationalite.libelle}}</option>    
+          </select>
+            </li>
+            <li>
+                <div>
+                    <input type="file" name="photo" accept="image/png, image/jpeg">
+                    <select name="typePersonne">
+                        <option selected disabled>-- Veuillez choisir une option --</option>
+                        <option >Acteur</option>    
+                        <option >Realisateur</option>    
+                      </select>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <button class="btn-grid" type="submit">
+             
+              <span class="front">SUBMIT</span>
+            </button>
+                    <button class="btn-grid" type="reset">
+              <span class="front">RESET</span>
+            </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</form>
