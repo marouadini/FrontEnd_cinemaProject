@@ -1,45 +1,101 @@
-<form class="my-form">
+<form class="my-form" [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="container">
         <h1>Ajouter un personne!</h1>
         <ul>
             <li>
                 <div>
-                    <input type="text" placeholder="Nom" name="nom">
-                    <input type="text" placeholder="Prenom" name="prenom">
-                </div>
-            </li>
-            <li>
-                <div>
-                    <input type="date" placeholder="Date de Naissance" name="date_naissance">
-                </div>
-            </li>
-            <li>
-                <select name="nationalite">
+                    <div class="f-control">
+                        <input type="text" placeholder="Nom" name="nom" formControlName="nom" />
+                        <small class="text-white" *ngIf="form.get('nom').touched && form.get('nom').invalid">Valeur de nom Invalide</small
+            >
+          </div>
+          <div class="f-control">
+            <input
+              type="text"
+              placeholder="Prenom"
+              name="prenom"
+              formControlName="prenom"
+            />
+            <small
+              class="text-white"
+              *ngIf="form.get('prenom').touched && form.get('prenom').invalid"
+              >Valeur de Prenom Invalide</small
+            >
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="f-control-100">
+          <input
+            type="date"
+            placeholder="Date de Naissance"
+            name="date_naissance"
+            formControlName="date_naissance"
+          />
+          <small
+          class="text-white"
+          *ngIf="form.get('date_naissance').touched && form.get('date_naissance').invalid"
+          >Le champ de Date de naissance est obligatoire</small
+        >
+        </div>
+      </li>
+      <li>
+        <div class="f-control-100">
+          <select name="nationalite" formControlName="nationalite">
             <option selected disabled>-- Veuillez choisir une option --</option>
-            <option *ngFor="let nationalite of nationalites" [value]="nationalite.id">{{nationalite.libelle}}</option>    
+            <option
+              *ngFor="let nationalite of nationalites"
+              [value]="nationalite.id"
+            >
+              {{ nationalite.libelle }}
+            </option>
           </select>
-            </li>
-            <li>
-                <div>
-                    <input type="file" name="photo" accept="image/png, image/jpeg">
-                    <select name="typePersonne">
-                        <option selected disabled>-- Veuillez choisir une option --</option>
-                        <option >Acteur</option>    
-                        <option >Realisateur</option>    
-                      </select>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <button class="btn-grid" type="submit">
-             
+          <small
+          class="text-white"
+          *ngIf="form.get('nationalite').touched && form.get('nationalite').invalid"
+          >Le champ de nationalite est obligatoire</small
+        >
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="f-control">
+            <input type="file" name="photo" accept="image/png, image/jpeg" />
+            
+          </div>
+          <div class="f-control">
+            <select name="typePersonne" formControlName="typePersonne">
+              <option selected disabled>
+                -- Veuillez choisir une option --
+              </option>
+              <option>Acteur</option>
+              <option>Realisateur</option>
+            </select>
+            <small
+            class="text-white"
+            *ngIf="form.get('typePersonne').touched && form.get('typePersonne').invalid"
+            >Le champ de type personne est obligatoire</small
+          >
+          </div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="f-control">
+            <button [disabled]="!form.valid" class="btn-grid" type="submit">
               <span class="front">SUBMIT</span>
             </button>
-                    <button class="btn-grid" type="reset">
-              <span class="front">RESET</span>
-            </button>
-                </div>
-            </li>
-        </ul>
-    </div>
+          </div>
+
+          <div class="f-control">
+                <button class="f-control" class="btn-grid" type="reset">
+            <span class="front">RESET</span>
+          </button> 
+          </div>
+
+       
+        </div>
+      </li>
+    </ul>
+  </div>
 </form>
