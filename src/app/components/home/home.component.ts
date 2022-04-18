@@ -6,29 +6,44 @@ import { HttpErrorResponse } from '@angular/common/http';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
- 
- 
 })
 export class HomeComponent implements OnInit {
 
-  public films : Film[];
-
-  constructor(private filmService : FilmService) { }
-
-  public getFilms(): void{
-    this.filmService.getFilms().subscribe(
-      (response: Film[]) => {
-        this.films = response;
+  public films : any[]=[];
+  cp  = 1;
+  constructor(private filmService: FilmService) { }
+  
+  public getFilmsPage(): void {
+    this.filmService.getFilmPage(this.cp).subscribe(
+      (response : any[] ) => {
+        for (let i = 0; i < response.length; i++) {
+           this.films.push(response[i]);
+        }
         console.log(response);
       },
-      (error : HttpErrorResponse) =>{
+      (error: HttpErrorResponse) => {
         console.log(error.message);
       }
     );
+    this.cp++;
   }
+  
+  /*
+    public getFilms(): void{
+      this.filmService.getFilms().subscribe(
+        (response: Film[]) => {
+          this.films = response;
+          console.log(response);
+        },
+        (error : HttpErrorResponse) =>{
+          console.log(error.message);
+        }
+      );
+    }*/
 
   ngOnInit(): void {
-   this.getFilms();
+    // this.getFilms();
+    this.getFilmsPage();
   }
 
 }

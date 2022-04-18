@@ -8,7 +8,7 @@ import { FormGroup, FormBuilder, FormArray, FormControl, Validators, AbstractCon
 export class ContactComponent implements OnInit {
 
   contactForm = new FormGroup({
-name :new FormControl('',Validators.required),
+  name :new FormControl('',Validators.required),
   prenom :new FormControl('',Validators.required),
   email :new FormControl('',[Validators.required,Validators.email]),
   message : new FormControl('',Validators.required)
@@ -21,6 +21,9 @@ name :new FormControl('',Validators.required),
   }
 
   get name(){ return this.contactForm.get('name');}
+  get prenom(){ return this.contactForm.get('prenom');}
+  get email(){ return this.contactForm.get('email');}
+  get message(){ return this.contactForm.get('message');}
 
   onSubmit(): void {
     this.submitted = true;

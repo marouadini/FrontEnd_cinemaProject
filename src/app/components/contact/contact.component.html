@@ -51,15 +51,15 @@
                             </div>
                             <div class="app-form-group">
                                 <input class="app-form-control" formControlName="prenom" name="prenom" placeholder="PRÉNOM*" >
-                                <span *ngIf="name.invalid && name.touched">Ce champ est obligatoire </span>
+                                <span *ngIf="prenom.invalid && name.touched">Ce champ est obligatoire </span>
                             </div>
                             <div class="app-form-group">
                                 <input class="app-form-control" formControlName="email" type="email" name="email" placeholder="EMAIL*" >
-                                <span *ngIf="name.invalid && name.touched">Ce champ est obligatoire </span>
+                                <span *ngIf="email.invalid && name.touched">Ce champ est obligatoire </span>
                             </div>
                             <div class="app-form-group message">
                                 <textarea class="app-form-control" formControlName="message" name="message" placeholder="MESSAGE*" ></textarea>
-                                <span *ngIf="name.invalid && name.touched">Ce champ est obligatoire </span>
+                                <span *ngIf="message.invalid && name.touched">Ce champ est obligatoire </span>
                             </div>
                             <div class="app-form-group buttons">
                                 <button class="app-form-button" type="reset">ANNULER</button> &nbsp;&nbsp;

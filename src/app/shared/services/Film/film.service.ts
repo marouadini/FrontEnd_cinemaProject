@@ -11,12 +11,16 @@ export class FilmService {
   // allows two applications to talk to each other
   private readonly api = environment.apiBaseUrl;
 
-
   constructor( private http : HttpClient) { }
 
   public getFilms(): Observable<Film[]>{
     return this.http.get<Film[]>(this.api+'/films');
   }
+   
+  public getFilmPage(cp):  Observable<any[]>{
+    return this.http.get<any[]>(this.api+'/films/pg?offset='+cp+'&limit=7');
+  }
+
   public getFilmById(filmId : number): Observable<void>{
     return this.http.get<void>(this.api+'/films/${filmId}');
   }
