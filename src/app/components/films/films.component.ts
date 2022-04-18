@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { data } from 'jquery';
+import { GenreService } from 'src/app/shared/services/Genre/genre.service';
 
 @Component({
   selector: 'app-films',
@@ -7,13 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilmsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private genreService:GenreService) { }
+  genres;
 
   ngOnInit(): void {
+          this.genreService.getAll().subscribe(date=>{
+            this.genres = date;
+            console.log(date)
+          })
   }
 
-// filter(id:number){
-//   console.log(id)
-// }
+ filterByGenre(id:number){
+   console.log(id)
+ }
   
 }

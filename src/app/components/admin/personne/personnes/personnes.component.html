@@ -1,0 +1,29 @@
+<a routerLink="/admin/ajouterPersonne" class="form__btn">Ajouter Personne</a>
+<div>
+    <div class="card-body">
+        <table class="accordion__list">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Date de naissance</th>
+                    <th>Type de personne</th>
+                    <th>Nationalite</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let personne of personnes">
+                    <th>{{personne.id}}</th>
+                    <th>{{personne.nom}}</th>
+                    <th>{{personne.prenom}}</th>
+                    <th>{{personne.dateNaissance}}</th>
+                    <th>{{personne.typePersonne}}</th>
+                    <th>{{personne.nationalite.libelle}}</th>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
