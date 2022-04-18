@@ -14,4 +14,8 @@ export class PersonneService {
   getAll():Observable<any>{
     return this.http.get(this.url+ "/personnes")
   }
+
+  add(personne):Observable<any>{
+    return this.http.post(this.url+ "/personnes", personne)
+  }
 }

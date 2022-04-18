@@ -1,6 +1,10 @@
 <form class="my-form" [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="container">
         <h1>Ajouter un personne!</h1>
+        <div class="text-center mt-1 mb-1">
+            <small class="text-white" *ngIf="validationMesage">{{validationMesage}}</small>
+
+        </div>
         <ul>
             <li>
                 <div>
@@ -33,10 +37,13 @@
             formControlName="date_naissance"
           />
           <small
-          class="text-white"
-          *ngIf="form.get('date_naissance').touched && form.get('date_naissance').invalid"
-          >Le champ de Date de naissance est obligatoire</small
-        >
+            class="text-white"
+            *ngIf="
+              form.get('date_naissance').touched &&
+              form.get('date_naissance').invalid
+            "
+            >Le champ de Date de naissance est obligatoire</small
+          >
         </div>
       </li>
       <li>
@@ -51,31 +58,41 @@
             </option>
           </select>
           <small
-          class="text-white"
-          *ngIf="form.get('nationalite').touched && form.get('nationalite').invalid"
-          >Le champ de nationalite est obligatoire</small
-        >
+            class="text-white"
+            *ngIf="
+              form.get('nationalite').touched && form.get('nationalite').invalid
+            "
+            >Le champ de nationalite est obligatoire</small
+          >
         </div>
       </li>
       <li>
         <div>
           <div class="f-control">
-            <input type="file" name="photo" accept="image/png, image/jpeg" />
-            
+            <input
+              (change)="getImage($event)"
+              type="file"
+              name="photo"
+              accept="image/png, image/jpeg"
+              formControlName="photo"
+            />
           </div>
           <div class="f-control">
             <select name="typePersonne" formControlName="typePersonne">
               <option selected disabled>
                 -- Veuillez choisir une option --
               </option>
-              <option>Acteur</option>
-              <option>Realisateur</option>
+              <option>ACTEUR</option>
+              <option>REALISATEUR</option>
             </select>
             <small
-            class="text-white"
-            *ngIf="form.get('typePersonne').touched && form.get('typePersonne').invalid"
-            >Le champ de type personne est obligatoire</small
-          >
+              class="text-white"
+              *ngIf="
+                form.get('typePersonne').touched &&
+                form.get('typePersonne').invalid
+              "
+              >Le champ de type personne est obligatoire</small
+            >
           </div>
         </div>
       </li>
@@ -88,12 +105,10 @@
           </div>
 
           <div class="f-control">
-                <button class="f-control" class="btn-grid" type="reset">
-            <span class="front">RESET</span>
-          </button> 
+            <button class="f-control" class="btn-grid" type="reset">
+              <span class="front">RESET</span>
+            </button>
           </div>
-
-       
         </div>
       </li>
     </ul>
