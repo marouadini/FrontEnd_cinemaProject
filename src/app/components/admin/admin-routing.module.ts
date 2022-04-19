@@ -7,6 +7,8 @@ import { GenreComponent } from './genre/genre.component';
 import { FilmComponent } from './film/film.component';
 import { AddUpdateGenreComponent } from './genres/add-update-genre/add-update-genre.component';
 import { AddUpdateFilmsComponent } from './film/films/add-update-films/add-update-films.component';
+import { NationaliteComponent } from './nationalite/nationalite/nationalite.component';
+import { AddUpdateNationaliteComponent } from './nationalite/add-update-nationalite/add-update-nationalite.component';
 
 const routes: Routes = [
   {
@@ -42,7 +44,19 @@ const routes: Routes = [
       {
         path: 'addUpdateGenre',
         component : AddUpdateGenreComponent
-      }
+      },
+      {
+        path: 'Nationalites',
+        component : NationaliteComponent
+      },
+      {
+        path: 'addUpdateNationalite/:id',
+        component: AddUpdateNationaliteComponent,
+      },
+      {
+        path: 'addUpdateNationalite',
+        component : AddUpdateNationaliteComponent
+      },
     ],
   },
  

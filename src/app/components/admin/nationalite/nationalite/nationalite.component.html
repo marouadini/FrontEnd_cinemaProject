@@ -1,0 +1,24 @@
+<a routerLink="/admin/addUpdateNationalite/" class="form__btn">Ajouter nationalite</a>
+<div>
+    <div class="card-body">
+        <table class="accordion__list">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Libelle</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let nationalite of nationalites" (dblclick)="prepareModification(nationalite.id)">
+                    <th>{{ nationalite.id }}</th>
+                    <th>{{ nationalite.libelle }}</th>
+                    <th>
+                        <i (click)="delete(nationalite.id)" class="fas fa-trash" aria-hidden="true"></i>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

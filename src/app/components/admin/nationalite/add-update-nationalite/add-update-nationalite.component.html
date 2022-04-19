@@ -1,0 +1,37 @@
+<form class="my-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <h1>Ajouter un Nationalite!</h1>
+        <div class="text-center mt-1 mb-1">
+            <small class="text-white" *ngIf="validationMesage">{{
+        validationMesage
+      }}</small>
+        </div>
+        <ul>
+            <li>
+                <div>
+                    <div class="f-control">
+                        <input type="text" placeholder="libelle" name="libelle" formControlName="libelle" />
+                        <small class="text-white" *ngIf="form.get('libelle').touched && form.get('libelle').invalid">Valeur de Liblle Invalide</small
+            >
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <div class="f-control">
+            <button [disabled]="!form.valid" class="btn-grid" type="submit">
+              <span class="front">SUBMIT</span>
+            </button>
+          </div>
+
+          <div class="f-control">
+            <button class="f-control" class="btn-grid" type="reset">
+              <span class="front">RESET</span>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</form>
