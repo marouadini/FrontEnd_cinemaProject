@@ -17,8 +17,8 @@ export class FilmService {
     return this.http.get<Film[]>(this.api+'/films');
   }
    
-  public getFilmPage(cp):  Observable<any[]>{
-    return this.http.get<any[]>(this.api+'/films/pg?offset='+cp+'&limit=7');
+  public getFilmPage(cp,limit):  Observable<any[]>{
+    return this.http.get<any[]>(this.api+'/films/pg?offset='+cp+'&limit='+limit);
   }
 
   public getFilmById(filmId : number): Observable<void>{
