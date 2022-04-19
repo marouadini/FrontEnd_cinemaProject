@@ -23,8 +23,9 @@ export class FilmService {
   public getFilmById(filmId : number): Observable<void>{
     return this.http.get<void>(this.api+'/films/${filmId}');
   }
-  public addFilm(film : Film): Observable<Film>{
-    return this.http.post<Film>(this.api+'/films',film);
+  
+  public addFilm(film): Observable<any>{
+    return this.http.post(this.api+'/films',film);
   }
   public updateFilm(film : Film): Observable<Film>{
     return this.http.put<Film>(this.api+'films',film);
