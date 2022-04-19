@@ -6,14 +6,19 @@
                 <tr>
                     <th>#</th>
                     <th>Libelle</th>
+                    <th></th>
 
                 </tr>
             </thead>
 
             <tbody>
-                <tr *ngFor="let genre of genres" (click)="prepareModification(genre.id)">
+                <tr *ngFor="let genre of genres" (dblclick)="prepareModification(genre.id)">
                     <th>{{genre.id}}</th>
                     <th>{{genre.libelle}}</th>
+                    <th><i (click)="delete(genre.id)" class="fas fa-trash" aria-hidden="true"></i>
+                    </th>
+
+
                 </tr>
 
             </tbody>

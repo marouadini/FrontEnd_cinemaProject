@@ -8,6 +8,8 @@ import { PersonnesComponent } from './personne/personnes/personnes.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GenreComponent } from './genre/genre.component';
 import { AddUpdateGenreComponent } from './genres/add-update-genre/add-update-genre.component';
+import { NationaliteComponent } from './nationalite/nationalite/nationalite.component';
+import { AddUpdateNationaliteComponent } from './nationalite/add-update-nationalite/add-update-nationalite.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { AddUpdateGenreComponent } from './genres/add-update-genre/add-update-ge
     AddPeronneComponent,
     PersonnesComponent,
     GenreComponent,
-    AddUpdateGenreComponent ],
+    AddUpdateGenreComponent,
+    NationaliteComponent,
+    AddUpdateNationaliteComponent ],
   imports: [
     CommonModule,
     AdminRoutingModule,

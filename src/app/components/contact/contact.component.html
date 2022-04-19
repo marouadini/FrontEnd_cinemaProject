@@ -44,21 +44,19 @@
                     <div class="app-form">
                         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                             <div class="app-form-group">
-                                <input class="app-form-control" 
-                                type="text" 
-                                formControlName="name" name="name" placeholder="NOM*"  />
+                                <input class="app-form-control" type="text" formControlName="name" name="name" placeholder="NOM*" />
                                 <span *ngIf="name.invalid && name.touched">Ce champ est obligatoire </span>
                             </div>
                             <div class="app-form-group">
-                                <input class="app-form-control" formControlName="prenom" name="prenom" placeholder="PRÉNOM*" >
+                                <input class="app-form-control" formControlName="prenom" name="prenom" placeholder="PRÉNOM*">
                                 <span *ngIf="prenom.invalid && name.touched">Ce champ est obligatoire </span>
                             </div>
                             <div class="app-form-group">
-                                <input class="app-form-control" formControlName="email" type="email" name="email" placeholder="EMAIL*" >
+                                <input class="app-form-control" formControlName="email" type="email" name="email" placeholder="EMAIL*">
                                 <span *ngIf="email.invalid && name.touched">Ce champ est obligatoire </span>
                             </div>
                             <div class="app-form-group message">
-                                <textarea class="app-form-control" formControlName="message" name="message" placeholder="MESSAGE*" ></textarea>
+                                <textarea class="app-form-control" formControlName="message" name="message" placeholder="MESSAGE*"></textarea>
                                 <span *ngIf="message.invalid && name.touched">Ce champ est obligatoire </span>
                             </div>
                             <div class="app-form-group buttons">
