@@ -8,6 +8,8 @@ import { PersonnesComponent } from './personne/personnes/personnes.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GenreComponent } from './genre/genre.component';
 import { AddUpdateGenreComponent } from './genres/add-update-genre/add-update-genre.component';
+import { FilmComponent } from './film/film.component';
+import { AddUpdateFilmsComponent } from './film/films/add-update-films/add-update-films.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { AddUpdateGenreComponent } from './genres/add-update-genre/add-update-ge
     AddPeronneComponent,
     PersonnesComponent,
     GenreComponent,
-    AddUpdateGenreComponent ],
+    AddUpdateGenreComponent,
+    FilmComponent,
+    AddUpdateFilmsComponent ],
   imports: [
     CommonModule,
     AdminRoutingModule,

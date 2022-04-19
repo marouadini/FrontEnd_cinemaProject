@@ -1,0 +1,71 @@
+<form class="my-form">
+    <div class="container">
+        <h1>Ajouter un Film !</h1>
+        <div class="text-center mt-1 mb-1">
+            <small class="text-white"></small>
+        </div>
+        <ul>
+            <li>
+                <div>
+                    <div class="f-control">
+                        <input type="text" placeholder="Titre" name="titre" formControlName="titre" />
+                    </div>
+                    <div class="f-control">
+                        <input type="text" placeholder="Duree" name="duree" formControlName="duree" />
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <div class="f-control">
+                        <input type="text" placeholder="Annee" name="annee" formControlName="annee" />
+                    </div>
+                    <div class="f-control">
+                        <input type="text" placeholder="Genre" name="genre" formControlName="genre" />
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="f-control-100">
+                    <input type="date" placeholder="Added date" name="added_date" formControlName="added_date" />
+                </div>
+            </li>
+            <li>
+                <div class="f-control-100">
+                    <select name="nationalite" formControlName="nationalite">
+                        <option selected disabled>-- Veuillez choisir une nationalite --</option>
+                        <option></option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div class="f-control-100">
+                    <select name="typePersonne" formControlName="typePersonne">
+                        <option selected disabled>
+                            -- Veuillez choisir une Realisateur --
+                        </option>
+                        <option>ACTEUR</option>
+                        <option>REALISATEUR</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="f-control">
+                        <button class="btn-grid" type="submit">
+                            <span class="front">SUBMIT</span>
+                        </button>
+                    </div>
+
+                    <div class="f-control">
+                        <button class="f-control" class="btn-grid" type="reset">
+                            <span class="front">RESET</span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</form>

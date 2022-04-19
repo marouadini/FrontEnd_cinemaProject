@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
            this.films.push(response[i]); 
         }
         console.log(response);
+        
       },
       (error: HttpErrorResponse) => {
         console.log(error.message);
