@@ -1,0 +1,22 @@
+<a routerLink="/admin/addUpdateGenre/" class="form__btn">Ajouter genre</a>
+<div>
+    <div class="card-body">
+        <table class="accordion__list">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Libelle</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let genre of genres" (click)="prepareModification(genre.id)">
+                    <th>{{genre.id}}</th>
+                    <th>{{genre.libelle}}</th>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
