@@ -1,0 +1,30 @@
+<div>
+    <div class="card-body">
+        <table class="accordion__list">
+            <thead>
+                <tr>
+                    <th>Numero</th>
+                    <th>Date de Projection</th>
+                    <th>Heure de debut</th>
+                    <th>Heure du fin</th>
+                    <th>Titre du Film</th>
+                    <th>Numero du Salle</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let seance of seances">
+                    <th>{{seance.id}}</th>
+                    <th>{{formatDate(seance.dateProjection)}}</th>
+                    <th>{{seance.heureDebut}}</th>
+                    <th>{{seance.heureFin}}</th>
+                    <th>{{seance.film.titre}}</th>
+                    <th>{{seance.salle.numero}}</th>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <a routerLink="/admin/ajouterSeance" class="form__btn">Ajouter Seance</a>
+</div>

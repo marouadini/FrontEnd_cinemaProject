@@ -1,8 +1,7 @@
-import {Seance} from './seance';
 export interface Salle{
 
-    idSalle:number;
+    id:number;
     capacite: number;
-    seance: Seance[];
+    numero: number;
     addedDate: Date;
 }

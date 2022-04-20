@@ -1,11 +1,13 @@
 import {Salle} from './salle';
+import { Film } from './film';
+
 export interface Seance{
     
-    idSeance: number;
+    id: number;
     dateProjection: Date;
     heureDebut: any;
     heureFin: any;
-    film: any;
+    film: Film;
     salle: Salle;
  
 }
