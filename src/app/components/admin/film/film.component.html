@@ -23,6 +23,9 @@
                     <th>{{film.nationalite.libelle}}</th>
                     <th>{{film.realisateur.nom}}</th>
                     <th>{{film.titre}}</th>
+                    <th>
+                        <i (click)="delete(film.id)" class="fas fa-trash" aria-hidden="true"></i>
+                    </th>
                 </tr>
 
             </tbody>

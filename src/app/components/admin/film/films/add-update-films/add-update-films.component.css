@@ -77,7 +77,6 @@ ul {
     color: var(--white);
     background: var(--bgFormEls);
 }
-
 .my-form .btn-grid {
     position: relative;
     overflow: hidden;

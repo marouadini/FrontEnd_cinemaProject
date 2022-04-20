@@ -13,5 +13,14 @@ export class FilmComponent implements OnInit {
   ngOnInit(): void {
     this.filmService.getFilms().subscribe (response =>{this.films = response;console.log(response);})
   }
-
+  
+  delete(id: number) {
+    if (confirm('Êtes-vous sûr de vouloir supprimer')) {
+      this.filmService.deleteFilm(id).subscribe((data) => {
+        let index = this.films.findIndex((e) => e.id === id);
+        this.films.splice(index, 1);
+        console.log(data);
+      });
+    }
+  }
 }

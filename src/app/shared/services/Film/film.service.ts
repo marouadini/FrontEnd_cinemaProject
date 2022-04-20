@@ -25,7 +25,7 @@ export class FilmService {
   }
   
   public addFilm(film): Observable<any>{
-    return this.http.post(this.api+'/films',film);
+    return this.http.post(this.api+'/films/dto',film);
   }
   public updateFilm(film : Film): Observable<Film>{
     return this.http.put<Film>(this.api+'films',film);
