@@ -1,31 +1,22 @@
-<!-- <form class="my-form" [formGroup]="form" (ngSubmit)="onSubmit()"> -->
 <form #addForm="ngForm" (ngSubmit)="onAddSeance(addForm)" class="my-form" method="post">
 
   <div class="container">
     <h1>Ajouter une seance</h1>
-    <!-- <div class="text-center mt-1 mb-1">
-            <small class="text-white" *ngIf="validationMesage">{{validationMesage}}</small>
-
-        </div> -->
     <ul>
       <li>
         <div>
           <div class="f-control">
-            <!-- <input type="text" ngModel placeholder="date de projection" name="dateProjection" required /> -->
+           
             <div>
               <input type="date" name="dateProjection" id="dateProjection" ngModel
                 value="Selectionnez la date de projection" required>
 
             </div>
-            <!-- <small class="text-white" *ngIf="form.get('libelle').touched && form.get('libelle').invalid">Valeur de Liblle Invalide</small> -->
+            
           </div>
           <div class="f-control">
             <input type="time" ngModel placeholder="Heure de debut" name="heureDebut" required />
-            <!-- <small class="text-white" *ngIf="form.get('libelle').touched && form.get('libelle').invalid">Valeur de Liblle Invalide</small> -->
-            <!-- <label for="appt">Choose a time for your meeting:</label> -->
-
-            <!-- <input type="time" id="appt" name="appt" min="09:00" max="18:00" required> -->
-
+          
           </div>
         </div>
       </li>

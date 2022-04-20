@@ -3,7 +3,6 @@ import { Seance } from 'src/app/interfaces/seance';
 import { SeanceService } from 'src/app/shared/services/Seance/seance.service';
 import { FilmService } from 'src/app/shared/services/Film/film.service';
 import { HttpErrorResponse } from '@angular/common/http';
-import { NgForm } from '@angular/forms';
 import { SalleService } from 'src/app/shared/services/Salle/salle.service';
 import { Film } from 'src/app/interfaces/film';
 import { Salle } from 'src/app/interfaces/salle';

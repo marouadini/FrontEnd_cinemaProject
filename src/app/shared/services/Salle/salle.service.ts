@@ -17,23 +17,7 @@ export class SalleService {
     return this.http.get<Salle[]>(`${this.api}/salles`);
   }
   
-  public getSalleById(salleId: number):Observable<Salle>{
-    return this.http.get<Salle>(`${this.api}/salles/${salleId}`);
-  }
-  
-  public addSalle(salle: Salle): Observable<Salle> {
-    return this.http.post<Salle>(`${this.api}/salles`,salle);
-  }
-  
-  public updateSalle(salle: Salle):Observable<Salle>{
-    return this.http.put<Salle>(`${this.api}/salles`, salle);
-  }
-  
-  
-  public deleteSalle(salleId: number): Observable<void> {
-    return this.http.delete<void>(`${this.api}/salles/delete/${salleId}`);
-  }
-
+ 
 
 
 
