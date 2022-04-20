@@ -52,7 +52,9 @@ export class AddPeronneComponent implements OnInit {
 
     let fdataPersonne = new FormData();
     fdataPersonne.append('personne', JSON.stringify(personne));
+
     fdataPersonne.append('photo', this.photo);
+    
     this.presonneService.add(fdataPersonne).subscribe(
       (data) => {
         this.validationMesage = 'Personne Ajouter avec success';
@@ -70,4 +72,5 @@ export class AddPeronneComponent implements OnInit {
   getImage(event) {
     this.photo = event.target.files[0];
   }
+
 }

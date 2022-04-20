@@ -1,10 +1,14 @@
+import { Genre } from "../shared/Models/Genre";
+import { Nationalite } from "../shared/Models/Nationalite";
+import { Realisateur } from "./Realisateur";
+
 export interface Film {
-    id : number;
-    added_date : Date;
-    annee : number;
-    duree : number;
     titre : string;
-    genre_id : number;
-    nationalite_id : number;
-    director_id : number;
+    duree : number;
+    annee : number;
+    photo : string;
+    genre : Genre;
+    nationalite : Nationalite;
+    realisateur : Realisateur;
+
 }

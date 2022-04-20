@@ -1,0 +1,34 @@
+<a routerLink="/admin/addFilm" class="form__btn">Ajouter film</a>
+<div>
+    <div class="card-body">
+        <table class="accordion__list">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>AddedDate</th>
+                    <th>FilmRatings</th>
+                    <th>Genre</th>
+                    <th>Nationalite</th>
+                    <th>Realisateur</th>
+                    <th>Titre</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let film of films" >
+                    <th>{{film.id}}</th>
+                    <th>{{film.addedDate}}</th>
+                    <th>{{film.filmRatings}}</th>
+                    <th>{{film.genre.libelle}}</th>
+                    <th>{{film.nationalite.libelle}}</th>
+                    <th>{{film.realisateur.nom}}</th>
+                    <th>{{film.titre}}</th>
+                    <th>
+                        <i (click)="delete(film.id)" class="fas fa-trash" aria-hidden="true"></i>
+                    </th>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

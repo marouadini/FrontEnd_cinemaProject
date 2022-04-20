@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Film } from 'src/app/interfaces/film';
 import { FilmService } from 'src/app/shared/services/Film/film.service';
 import { HttpErrorResponse } from '@angular/common/http';
 @Component({
@@ -14,12 +13,13 @@ export class HomeComponent implements OnInit {
   constructor(private filmService: FilmService) { }
   
   public getFilmsPage(): void {
-    this.filmService.getFilmPage(this.cp).subscribe(
+    this.filmService.getFilmPage(this.cp,7).subscribe(
       (response : any[] ) => {
         for (let i = 0; i < response.length; i++) {
-           this.films.push(response[i]);
+           this.films.push(response[i]); 
         }
         console.log(response);
+        
       },
       (error: HttpErrorResponse) => {
         console.log(error.message);

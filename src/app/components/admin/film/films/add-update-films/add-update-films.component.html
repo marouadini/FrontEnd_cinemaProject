@@ -1,0 +1,78 @@
+<form #addForm="ngForm" (ngSubmit)="onAddFilm(addForm)" class="my-form">
+    <div class="container">
+        <h1>Ajouter un Film !</h1>
+        <ul>
+            <li>
+                <div>
+                    <div class="f-control">
+                        <input type="text" ngModel placeholder="Titre" name="titre" id="titre" required />
+                    </div>
+                    <div class="f-control">
+                        <input type="text" ngModel placeholder="Duree" name="duree" id="duree" required />
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="f-control-100">
+                        <input type="text" ngModel placeholder="Annee" name="annee" id="annee" required />
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="f-control-100">
+                    <small>Photo</small>
+                    <input (change)="getImage($event)" type="file" name="photo" id="photo" accept="image/png, image/jpeg"
+                        />
+                </div>
+            </li>
+            <li>
+                <div class="f-control-100">
+                    <small>Nationalite</small>
+                    <select ngModel name="nationalite" id="nationalite" required>
+                        <option selected disabled>-- Veuillez choisir une nationalite --</option>
+                        <option *ngFor="let nationalite of nationalites" [value]="nationalite.id">
+                            {{ nationalite.libelle }}
+                        </option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div class="f-control-100">
+                    <small>Realisateur</small>
+                    <select ngModel name="realisateur" id="realisateur" required>
+                        <option selected disabled>-- Veuillez choisir une Realisateur --</option>
+                        <option *ngFor="let nationalite of realisateurs" [value]="nationalite.id">
+                            {{ nationalite.nom }}
+                        </option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div class="f-control-100">
+                    <small>Genre</small>
+                    <select ngModel name="genre" id="genre" required>
+                        <option selected disabled>-- Veuillez choisir un genre --</option>
+                        <option *ngFor="let genre of genres" [value]="genre.id">
+                            {{ genre.libelle }}
+                        </option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="f-control">
+                        <button [disabled]="addForm.invalid" class="btn-grid" type="submit">
+                            <span class="front">SUBMIT</span>
+                        </button>
+                    </div>
+                    <div class="f-control">
+                        <button id="add-employee-form" class="f-control" class="btn-grid" type="reset">
+                            <span class="front">RESET</span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</form>

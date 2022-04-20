@@ -59,7 +59,7 @@ export class AddUpdateGenreComponent implements OnInit {
     }else{
       this.genreService.update(this.genre).subscribe(
         (data) => {
-          this.validationMesage = 'mese a jour reusse';
+          this.validationMesage = 'mise a jour reusse';
 
         },
         (error) => {
@@ -67,5 +67,8 @@ export class AddUpdateGenreComponent implements OnInit {
         }
       );
     }
+    setInterval(()=>{
+      this.validationMesage= null;
+    }, 3000)
   }
 }

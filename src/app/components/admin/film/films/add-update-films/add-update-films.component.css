@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    color: inherit;
+}
+
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+button,
+label {
+    cursor: pointer;
+}
+
+select {
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:-moz-focusring {
+    color: transparent !important;
+    text-shadow: 0 0 0 var(--white);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    --white: #afafaf;
+    --red: #e31b23;
+    --bodyColor: #292a2b;
+    --borderFormEls: hsl(0, 0%, 10%);
+    --bgFormEls: hsl(0, 0%, 14%);
+    --bgFormElsFocus: hsl(0, 7%, 20%);
+    font: 18px/1.5 "Open Sans", sans-serif;
+    color: var(--white);
+    margin: 1.5rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.my-form h1 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.my-form li {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-gap: 1.5rem;
+}
+
+.my-form select,
+.my-form input,
+.my-form textarea,
+.my-form button {
+    width: 100%;
+    line-height: 1.5;
+    padding: 15px 10px;
+    border: 1px solid var(--borderFormEls);
+    color: var(--white);
+    background: var(--bgFormEls);
+}
+.my-form .btn-grid {
+    position: relative;
+    overflow: hidden;
+    transition: filter 0.2s;
+}
+
+.my-form button {
+    font-weight: bold;
+}
+
+.my-form button>* {
+    display: inline-block;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+li div {
+    display: flex;
+}
+
+li div input:nth-child(2n),
+button:nth-child(2n) {
+    margin-left: 1rem;
+}
+
+li div select:nth-child(2n),
+button:nth-child(2n) {
+    margin-left: 1rem;
+}
+
+.f-control {
+    width: 48%;
+    margin: 0rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.f-control-100 {
+    width: 98%;
+    margin: auto;
+    margin: 0rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+small {
+    margin-top: 0.2rem;
+}

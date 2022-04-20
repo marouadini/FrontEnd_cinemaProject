@@ -20,7 +20,12 @@ export class GenreService {
   add(genre): Observable<any> {
     return this.http.post(this.url + '/genres', genre);
   }
-  getByid(idGenre): Observable<any> {
+  getByid(idGenre:number): Observable<any> {
     return this.http.get(this.url + '/genres/' + idGenre);
+  }
+
+  delete(idGenre:number): Observable<any> {
+    return this.http.delete<string>(this.url + '/genres/' + idGenre ,
+    { responseType: 'text' as 'json'});
   }
 }
