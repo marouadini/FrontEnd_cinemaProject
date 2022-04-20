@@ -12,6 +12,8 @@ import { FilmComponent } from './film/film.component';
 import { AddUpdateFilmsComponent } from './film/films/add-update-films/add-update-films.component';
 import { NationaliteComponent } from './nationalite/nationalite/nationalite.component';
 import { AddUpdateNationaliteComponent } from './nationalite/add-update-nationalite/add-update-nationalite.component';
+import { SeancesComponent } from './seance/seances/seances.component';
+import { AddSeanceComponent } from './seance/add-seance/add-seance.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { AddUpdateNationaliteComponent } from './nationalite/add-update-national
     FilmComponent,
     AddUpdateFilmsComponent ,
     NationaliteComponent,
-    AddUpdateNationaliteComponent 
+    AddUpdateNationaliteComponent,
+     SeancesComponent,
+    AddSeanceComponent 
   ],
   imports: [
     CommonModule,
