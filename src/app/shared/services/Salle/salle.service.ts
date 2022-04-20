@@ -17,10 +17,5 @@ export class SalleService {
     return this.http.get<Salle[]>(`${this.api}/salles`);
   }
   
- 
-
-
-
-
 
 }
