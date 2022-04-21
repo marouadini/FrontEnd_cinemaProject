@@ -13,7 +13,7 @@ export class FilmService {
   constructor( private http : HttpClient) { }
 
   public getFilms(): Observable<any[]>{
-    return this.http.get<any[]>(this.api+'/films');
+    return this.http.get<any[]>(this.api+'/films/dto');
   }
    
   public getFilmPage(cp,limit):  Observable<any[]>{
