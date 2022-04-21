@@ -13,7 +13,11 @@ export class PersonnesComponent implements OnInit {
   personnes;
 
   ngOnInit(): void {
-    this.personneService.getAll().subscribe(data=>{
+   this.getPersonne();
+  }
+
+  getPersonne(){
+     this.personneService.getAll().subscribe(data=>{
       this.personnes =data;
     })
   }
