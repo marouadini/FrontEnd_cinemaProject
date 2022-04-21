@@ -38,6 +38,13 @@ Primary use:	FlixGo Template
 /*==============================
 	Common styles
 ==============================*/
+.error{
+font-size: 10px;
+color: red;
+
+}
+
+
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
