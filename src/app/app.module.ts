@@ -8,8 +8,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FilmsComponent } from './components/films/films.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { SigninComponent } from './components/Security/signin/signin.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SignupComponent } from './components/Security/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -19,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     EvenementComponent,
     ContactComponent,
     FilmsComponent,
-    HomeComponent
+    HomeComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
