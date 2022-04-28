@@ -11,6 +11,9 @@ import { NationaliteComponent } from './nationalite/nationalite/nationalite.comp
 import { AddUpdateNationaliteComponent } from './nationalite/add-update-nationalite/add-update-nationalite.component';
 import { SeancesComponent } from './seance/seances/seances.component';
 import { AddSeanceComponent } from './seance/add-seance/add-seance.component';
+import { SallesComponent } from './salle/salles/salles.component';
+import { AddSalleComponent } from './salle/add-salle/add-salle.component';
+
 
 const routes: Routes = [
   {
@@ -67,6 +70,15 @@ const routes: Routes = [
         path: 'ajouterSeance',
         component:AddSeanceComponent,
       },
+      {
+        path: 'salles',
+        component: SallesComponent,
+      },
+      {
+        path: 'ajouterSalle',
+        component: AddSalleComponent,
+      },
+    
     ],
   },
  

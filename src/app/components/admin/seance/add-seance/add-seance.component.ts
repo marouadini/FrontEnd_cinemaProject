@@ -29,12 +29,11 @@ export class AddSeanceComponent implements OnInit {
 
     this.salleService.getSalles().subscribe((data) => {
       this.salles= data;
-    })
+    });
   }
 
   public onAddSeance(addForm: any): void {
     let seance = addForm.value;
-
     seance.film = { id: Number(seance.film) }
     seance.salle = { id: Number(seance.salle) }
 

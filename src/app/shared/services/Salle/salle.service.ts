@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class SalleService {
 
-  private readonly api = environment.apiBaseUrl;
+  api = environment.url;
  
 
   constructor(private http:HttpClient) { }
@@ -17,5 +17,16 @@ export class SalleService {
     return this.http.get<Salle[]>(`${this.api}/salles`);
   }
   
+  public addSalle(salle: Salle): Observable<Salle> {
+    return this.http.post<Salle>(`${this.api}/salles`,salle);
+  }
+  
+  public deleteSalle(idSalle: number): Observable<any> {
+    return this.http.delete<string>(this.api + '/salles/' + idSalle,
+    { responseType: 'text' as 'json'}
+    );
+  }
 
-}
+ 
+  }
+

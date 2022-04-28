@@ -14,6 +14,10 @@ import { NationaliteComponent } from './nationalite/nationalite/nationalite.comp
 import { AddUpdateNationaliteComponent } from './nationalite/add-update-nationalite/add-update-nationalite.component';
 import { SeancesComponent } from './seance/seances/seances.component';
 import { AddSeanceComponent } from './seance/add-seance/add-seance.component';
+import { SallesComponent } from './salle/salles/salles.component';
+import { AddSalleComponent } from './salle/add-salle/add-salle.component';
+
+
 
 
 @NgModule({
@@ -28,7 +32,11 @@ import { AddSeanceComponent } from './seance/add-seance/add-seance.component';
     NationaliteComponent,
     AddUpdateNationaliteComponent,
      SeancesComponent,
-    AddSeanceComponent 
+    AddSeanceComponent,
+    SallesComponent,
+    AddSalleComponent,
+   
+  
   ],
   imports: [
     CommonModule,

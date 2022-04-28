@@ -1,0 +1,29 @@
+
+<a routerLink="/admin/ajouterSalle" class="form__btn">Ajouter Salle</a>
+<div>
+    <div class="card-body">
+        <table class="accordion__list">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Capacite</th>
+                    <th>Numero</th>
+                    <th>La date d'ajout</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let salle of salles">
+                    <th>{{salle.id}}</th>
+                    <th>{{salle.capacite}}</th>
+                    <th>{{salle.numero}}</th>
+                    <th>{{formatDate(salle.addedDate)}}</th>
+                    <th><i (click)="delete(salle.id)" class="fas fa-trash" aria-hidden="true"></i>
+                    </th>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

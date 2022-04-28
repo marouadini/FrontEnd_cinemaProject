@@ -8,23 +8,24 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class SeanceService {
-  private readonly api = environment.apiBaseUrl;
+   api = environment.url;
   
 
   constructor(private http:HttpClient) {
    }
 
    public getSeances(): Observable<Seance[]>{
-    return this.http.get<Seance[]>(this.api+'/seances');
+    return this.http.get<Seance[]>(`${this.api}/seances`);
   }
-
-
 
 public addSeance(seance: Seance): Observable<Seance> {
   return this.http.post<Seance>(`${this.api}/seances`,seance);
 }
 
-
-
+public deleteSeance(idSeance: number): Observable<any> {
+  return this.http.delete<string>(this.api + '/seances/' + idSeance,
+  { responseType: 'text' as 'json'}
+  );
+}
 
 }

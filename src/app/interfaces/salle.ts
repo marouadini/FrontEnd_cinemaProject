@@ -4,4 +4,6 @@ export interface Salle{
     capacite: number;
     numero: number;
     addedDate: Date;
+
+  
 }

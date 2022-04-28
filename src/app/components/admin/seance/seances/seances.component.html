@@ -21,6 +21,8 @@
                     <th>{{seance.heureFin}}</th>
                     <th>{{seance.film.titre}}</th>
                     <th>{{seance.salle.numero}}</th>
+                    <th><i (click)="delete(seance.id)" class="fas fa-trash" aria-hidden="true"></i>
+                    </th>
 
                 </tr>
 

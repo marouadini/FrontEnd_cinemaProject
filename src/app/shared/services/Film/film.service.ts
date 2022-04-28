@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class FilmService {
   // allows two applications to talk to each other
-  private readonly api = environment.apiBaseUrl;
+  api = environment.url;
   constructor( private http : HttpClient) { }
 
   public getFilms(): Observable<any[]>{

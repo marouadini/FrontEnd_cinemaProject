@@ -1,0 +1,47 @@
+<form #addSalleForm="ngForm" (ngSubmit)="onAddSalle(addSalleForm)" class="my-form" method="post">
+    <div class="container">
+      <h1>Ajouter une salle</h1>
+      <ul>
+        <li>
+          <div>
+            <div class="f-control">
+  
+              <div>
+                <input type="number" name="capacite" id="capacite" ngModel
+                  placeholder="Saisir la capacite de la salle" required>
+  
+              </div>
+  
+            </div>
+            <div class="f-control">
+              <input type="number" ngModel placeholder="Saisir le numero de la salle" name="numero" id="numero" required />
+  
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="f-control-100">
+            <input type="date" name="addedDate" id="addedDate" ngModel
+            value="Selectionnez la date d'ajout" required>
+  
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="f-control">
+              <button [disabled]="addSalleForm.invalid" class="btn-grid" type="submit">
+                <span class="front">SUBMIT</span>
+              </button>
+            </div>
+  
+  
+            <div class="f-control">
+              <button class="f-control" class="btn-grid" type="reset">
+                <span class="front">RESET</span>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </form>
